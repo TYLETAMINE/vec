@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Main */
+.header {
+    position: relative;
+    
+    display: grid;
+    color: white;
+    padding: 20px 50px;
+    align-items: center;
+    background: rgb(28, 28, 107);
+    justify-content: space-between;
+    grid-template-columns: 30% auto 30%;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+
+    & a {
+        color: white;
+        text-decoration: none;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+    }
+}
+
+.logo > p > a:hover {
+    color: rgb(190, 190, 190);
+}
+
+.nav-list {
+    display: grid;
+    grid-gap: 55px;
+    list-style: none;
+    grid-template-columns: repeat(3, max-content);
+}
+
+.nav-list > li {
+    width: 0%;
+    border-bottom: 3px solid white;
+
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+}
+
+.nav-list > li:hover {
+    width: 100%;
+}
+
+
+.nav-list > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    width: 100% !important;
+    border-color: green !important;
+}
+
+.search-contain {
+    display: grid;
+    grid-gap: 15px;
+    justify-content: end;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.search {
+    cursor: pointer;
+
+    display: grid;
+    justify-self: end;
+    background: url(./source/search.svg);
+
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+}
+
+.search:hover {
+    filter: contrast(30%);
+}
+
+#searchInput {
+    /* display: none; */
+    opacity: 0;
+
+    font-size: 14px;
+    padding: 5px 15px;
+
+    border: none;
+    outline: none;
+    border-radius: 15px;
+
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+}
+
+.main {
+    display: grid;
+    padding: 50px;
+    justify-content: center;
+}
+
+.wrapper {
+    border-radius: 25px;
+    box-shadow: 0 0 10px 10px rgb(150, 150, 150);
+}
+
+.background {
+    background: url(./source/background.png);
+
+    display: grid;
+    place-content: center;
+
+    width: 70svw;
+    height: 55svh;
+    background-size: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+.background__title {
+    padding: 70px;
+    text-align: center;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+
+    & .ur,
+    .op {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    & .op {
+        font-size: 32px;
+    }
+}
+
+.hr-line {
+    height: 15px;
+    background-color: rgb(28, 28, 107);
+}
+
+.news-title {
+    padding: 20px;
+    font-size: 25px;
+
+    display: grid;
+    justify-content: center;
+}
+
+.main__news {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto;
+
+    height: 70svh;
+    padding: 70px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-radius: 0 0 25px 25px;
+}
+
+.main__news::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main__news::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(28, 28, 107, 0.5);
+}
+
+.main__news::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(28, 28, 107);
+}
+
+.main__news::-webkit-scrollbar-button {
+    border-radius: 10px;
+    /* background: rgb(115, 115, 253); */
+}
+
+.item-news {
+    padding: 20px;
+    cursor: pointer;
+
+    width: 400px;
+    height: 27svh;
+    border-radius: 15px;
+    background-color: rgb(233, 233, 233);
+    box-shadow: 0 0 5px 5px rgb(216, 216, 216);
+
+    overflow-wrap: break-word;
+
+    display: grid;
+    color: white;
+    place-content: center;
+}
+
+.item-news1 {
+    background: url(https://www.infpol.ru/upload/iblock/cc2/fntm3t6lw75mxy6zl1dqwq8hg0c8d7ax.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -10px;
+}
+
+.item-news2 {
+    background: url(https://www.hse.ru/data/2023/10/18/2050835342/3iStock-1314155898.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -10px;
+}
+
+.item-news3 {
+    background: url(https://sun9-58.userapi.com/impg/34kGYZITg4Lgo-BjwAmOhndJ7RcOQSKlLhJW5w/zjGvlRrmN_k.jpg?size=1280x852&quality=95&sign=6d8425110cb0a72a8488bd63b28d7777&type=album);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -10px;
+}
+
+.item-news4 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT388apH9q4aU8_pnblK7eI5qmKm3HGN2cWWw&s);
+    background-size: cover;
+}
+
+.item-news5 {
+    background: url(https://cdn.culture.ru/images/796ca2e2-44bd-5e9c-8de7-b37d4013c697);
+    background-size: cover;
+}
+
+.footer {
+    display: grid;
+    padding: 30px;
+    color: white;
+    place-content: center;
+    background-color: rgb(28, 28, 107);
+}
+
+/* Maps */
+.map__title {
+    display: grid;
+    justify-content: center;
+
+    padding: 15px;
+    font-size: 30px;
+}
+
+.map__wrapper {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+}
+
+#map {
+    display: grid;
+    justify-self: center;
+
+    width: 900px;
+    height: 560px;
+}
+
+.ymaps-2-1-79-map ymaps {
+    border-radius: 20px;
+}
+
+/* Dialog window */
+.dialog-window {
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100svw;
+    height: 100svh;
+    position: fixed;
+
+    display: grid;
+    grid-gap: 30px;
+    place-content: center;
+    justify-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    animation: dialogWindowAnim .3s;
+}
+
+.close-window {
+    cursor: pointer;
+
+    border: none;
+    color: white;
+    font-size: 16px;
+    width: max-content;
+    padding: 15px 25px;
+    border-radius: 15px;
+    background-color: rgb(28, 28, 107);
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+}
+
+.close-window:hover {
+    background-color: rgb(11, 11, 72);
+}
+
+.news-contain {
+    padding: 50px;
+
+    max-width: 60svw;
+    border-radius: 20px;
+    background-color: white;
+}
+
+@keyframes dialogWindowAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

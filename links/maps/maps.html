@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEC - Карты</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="./maps.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b10dac1b-bfa5-4e67-954c-548dc0311d83&lang=ru_RU"
+        type="text/javascript"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="https://yastatic.net/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo logo">
+            <p><a href="/index.html">Воткинский машиностроительный техникум</a></p>
+        </div>
+
+        <ul class="header__nav-list nav-list">
+            <li class="items item1"><a href="#">Информация</a></li>
+            <li class="items item2 active">Карта</li>
+            <li class="items item3"><a href="/links/contacts/contacts.html">Контакты</a></li>
+        </ul>
+
+        <div class="header__search search"></div>
+    </header>
+
+    <p class="map__title">Как нас найти?</p>
+    <div class="map__wrapper">
+        <div id="map"></div>
+    </div>
+</body>
+
+</html>
